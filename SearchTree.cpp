@@ -12,7 +12,7 @@ public:
     // Constructor for the node class
     Node(string i, Node *l, Node *r)
     {
-        info - i;
+        info = i;
         leftchild = l;
         rightchild = r;
     }
@@ -29,3 +29,12 @@ public:
     }
 
     void insert(string element)
+    {
+        Node *newNode = new Node(element, NULL, NULL);
+
+        newNode->info = element;
+        newNode->leftchild = NULL;
+        newNode->rightchild = NULL;
+
+        Node *parent = NULL;
+        Node *currentNode = NULL;
